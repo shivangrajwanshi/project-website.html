@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proximity‑Gated Biometric Access Controller — Shivang Rajwanshi</title>
-  <meta name="description" content="Edge access controller for telecom/industrial sites. BLE cryptographic attestation gates fingerprint; offline decisioning, anti‑relay timing, tamper‑evident logs.">
-  <meta property="og:title" content="Proximity‑Gated Biometric Access Controller">
-  <meta property="og:description" content="Phone must pass BLE attestation, then fingerprint. Offline decision, anti‑relay timing, tamper‑evident logs.">
+  <title>Proximity-Gated Biometric Access Controller — Shivang Rajwanshi</title>
+  <meta name="description" content="Edge access controller for telecom/industrial sites. BLE cryptographic attestation gates fingerprint; offline decisioning, anti-relay timing, tamper-evident logs.">
+  <meta property="og:title" content="Proximity-Gated Biometric Access Controller">
+  <meta property="og:description" content="Phone must pass BLE attestation, then fingerprint. Offline decision, anti-relay timing, tamper-evident logs.">
   <meta property="og:type" content="website">
   <style>
-    :root { --bg:#0b0f17; --card:#121826; --accent:#7dd3fc; --muted:#94a3b8; --text:#e2e8f0; --ok:#22c55e; --warn:#f59e0b; }
+    :root { --bg:#0b0f17; --card:#121826; --accent:#7dd3fc; --muted:#94a3b8; --text:#e2e8f0; }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0f17,#0d1320);color:var(--text)}
     a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
@@ -39,27 +39,27 @@
   <div class="wrap">
     <div class="hero card">
       <div>
-        <span class="badge mono">Proximity‑Gated Biometric Access Controller</span>
-        <h1>Two‑factor physical access that works without cloud</h1>
+        <span class="badge mono">Proximity-Gated Biometric Access Controller</span>
+        <h1>Two-factor physical access that works without cloud</h1>
         <p class="lead">
           A registered smartphone must first pass <b>BLE cryptographic attestation</b>; only then is the <b>fingerprint</b> sensor enabled.
-          Final decision is made <b>locally/offline</b>, with <b>anti‑relay</b> latency windows, <b>secure element</b>, and
-          <b>tamper‑evident (hash‑chained) logs</b>. Interfaces: <b>OSDP Secure Channel / Wiegand</b>, relays, <b>CAN/LIN</b>.
+          Final decision is made <b>locally/offline</b>, with <b>anti-relay</b> latency windows, <b>secure element</b>, and
+          <b>tamper-evident (hash-chained) logs</b>. Interfaces: <b>OSDP Secure Channel / Wiegand</b>, relays, <b>CAN/LIN</b>.
         </p>
         <div class="cta">
           <a class="btn" href="#contact">Contact</a>
-          <a class="btn btn--ghost" href="#pilot">Pilot with MTS</a>
+          <a class="btn btn--ghost" href="#pilot">Pilot proposal</a>
         </div>
         <p class="tiny">Inventor: Shivang Rajwanshi · Independent Researcher (India)</p>
       </div>
       <div class="card">
         <h2>Key capabilities</h2>
         <ul>
-          <li>BLE attestation (ECDH/AES‑GCM), signed policies, nonces/counters</li>
-          <li>Biometric PAD; encrypted local templates; privacy‑by‑design</li>
-          <li>Anti‑relay timing windows; fail‑secure + offline continuity</li>
-          <li>Tamper sensors + hash‑chained audit; SIEM export</li>
-          <li>OSDP/Wiegand + relays/dry‑contact; CAN/LIN for elevators/lockers/ECUs</li>
+          <li>BLE attestation (ECDH/AES-GCM), signed policies, nonces/counters</li>
+          <li>Biometric PAD; encrypted local templates; privacy-by-design</li>
+          <li>Anti-relay timing windows; fail-secure + offline continuity</li>
+          <li>Tamper sensors + hash-chained audit; SIEM export</li>
+          <li>OSDP/Wiegand + relays/dry-contact; CAN/LIN for elevators/lockers/ECUs</li>
         </ul>
         <div class="kpis">
           <div class="card"><span class="pill mono">Latency P50/P95</span></div>
@@ -73,11 +73,11 @@
     <div class="grid">
       <div class="card">
         <h2>Problem</h2>
-        <p>Badges/PINs are easily cloned; many mobile readers don’t prove proximity or fail securely. Critical facilities need cloud‑independent access and audit.</p>
+        <p>Badges/PINs are easily cloned; many mobile readers don’t prove proximity or fail securely. Critical facilities need cloud-independent access and audit.</p>
       </div>
       <div class="card">
         <h2>Solution</h2>
-        <p>Enforce phone‑then‑fingerprint. Decision stays at the edge; logs are tamper‑evident; works through outages; broad I/O for doors, racks, lockers, elevators.</p>
+        <p>Enforce phone-then-fingerprint. Decision stays at the edge; logs are tamper-evident; works through outages; broad I/O for doors, racks, lockers, elevators.</p>
       </div>
       <div class="card">
         <h2>Market Fit</h2>
@@ -86,22 +86,23 @@
     </div>
 
     <div id="pilot" class="card" style="margin-top:18px;">
-      <h2>Pilot outline</h2>
+      <h2>Pilot outline (example)</h2>
       <ul>
-        <li>Sites: 1–2 BTS shelters + 1 POP/DC room (optionally a locker/elevator enable)</li>
-        <li>Integrations: OSDP/Wiegand panel, relays; SIEM feed</li>
-        <li>KPIs: latency P50/P95, FAR/FRR (PAD), offline endurance, anti‑relay rejection, tamper‑to‑alert</li>
+        <li>Sites: 1–2 base-station shelters + 1 POP/DC room (or doors/racks/lockers/elevator enable at an enterprise site)</li>
+        <li>Integrations: OSDP/Wiegand panel, relays; optional CAN/LIN; SIEM feed</li>
+        <li>KPIs: latency P50/P95, FAR/FRR (PAD), offline endurance, anti-relay rejection, tamper-to-alert</li>
       </ul>
+      <p class="tiny">Note: The pilot outline is illustrative and not tied to any specific company.</p>
     </div>
 
     <div id="contact" class="card" style="margin-top:18px;">
       <h2>Contact</h2>
       <p><b>Shivang Rajwanshi</b> — Independent Researcher (India)</p>
       <p>Email: <a href="mailto:shivangrajwanshi@gmail.com">shivangrajwanshi@gmail.com</a> · Mobile: <a href="tel:+919634402628">+91 96344 02628</a></p>
-      <p class="tiny">Patent applications filed (India): proximity‑gated biometrics; BLE anti‑relay timing. Details available on request.</p>
+      <p class="tiny">Patent applications filed (India): proximity-gated biometrics; BLE anti-relay timing. Details available on request.</p>
     </div>
 
-    <div class="footer">© Shivang Rajwanshi — Proximity‑Gated Biometric Access Controller</div>
+    <div class="footer">© Shivang Rajwanshi — Proximity-Gated Biometric Access Controller</div>
   </div>
 </body>
 </html>
